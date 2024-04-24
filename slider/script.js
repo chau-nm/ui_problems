@@ -2,7 +2,7 @@
 const bannerLinks = [
   "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/121a65b9-a726-4c9c-b7e2-d19967793dbf/dgfpm50-98b673b9-1204-462a-8962-ffe5ad5a0ba1.png/v1/fill/w_1280,h_427,q_80,strp/anime_banner_by_aerobtw_dgfpm50-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDI3IiwicGF0aCI6IlwvZlwvMTIxYTY1YjktYTcyNi00YzljLWI3ZTItZDE5OTY3NzkzZGJmXC9kZ2ZwbTUwLTk4YjY3M2I5LTEyMDQtNDYyYS04OTYyLWZmZTVhZDVhMGJhMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.9lNuKt9wzA98cNOJnUXWWtzfDaFqVMGkUfuIeEc6wSg",
   "https://preview.redd.it/made-this-anime-banner-in-pixlr-v0-eni9yujjzvxa1.jpg?auto=webp&s=8b871c713fdb41aaf0c08702857ba0e8464534cf",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg79P6mxRJUOSBHaKLJSbP4jEQmj356_bzMg&usqp=CAU"
+  "https://i.pinimg.com/originals/41/fe/86/41fe86db04e5fc00c896d92bddfe99e1.jpg"
 ];
 
 const createImage = (url) => {
