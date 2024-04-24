@@ -93,3 +93,13 @@ directButtons.forEach((btn, index) => {
     translateBanner(activeIndex);
   });
 });
+
+// auto scroll
+setInterval(() => {
+  if (activeIndex >= banners.length - 1) {
+    activeIndex = 0;
+  } else {
+    activeIndex++;
+  }
+  translateBanner(activeIndex);
+}, 4000)
