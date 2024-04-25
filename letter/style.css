@@ -1,0 +1,138 @@
+:root {
+  --letter-width: 200px;
+  --letter-height: 128px;
+}
+body {
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* evelop */
+#letter {
+  width: var(--letter-width);
+  height: var(--letter-height);
+  background-color: #bfedfd;
+  position: relative;
+  box-shadow: 
+    0px 4px 3px 3px #44879e,
+    0px 4px 3px 2px #8bcfe6,
+    0px 4px 3px 4px #dcf6ff;
+  cursor: pointer;
+  animation-name: jump;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  z-index: 0;
+}
+
+/* letter animation */
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+#letter:hover {
+  animation-name: shake;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translateY(-30px) rotate(-10deg);
+  }
+  40% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#letter.open:hover {
+  animation-name: none;
+}
+#letter.open {
+  animation-name: none;
+}
+
+
+#letter .frontEnvelope {
+  position: absolute;
+  border-top: calc(var(--letter-height) / 3 + 20px) solid transparent;
+  border-left: calc(var(--letter-width) / 2) solid #c9f1ff;
+  border-right: calc(var(--letter-width) / 2) solid #c9f1ff;
+  border-bottom: calc(var(--letter-height) / 3 * 2 - 20px) solid #bfedfd;
+  z-index: 3;
+}
+
+#letter .letterCap {
+  position: absolute;
+  border-left: calc(var(--letter-width) / 2) solid transparent;
+  border-right: calc(var(--letter-width) / 2) solid transparent;
+  transform-origin: top;
+  transition: 0.3s;
+  
+}
+
+#letter .letterCap.lowerHalf {
+  border-top: calc(var(--letter-height) / 3 + 20px) solid #3b85cf;
+  transform: rotateX(0deg);
+  transition-delay: 0s;
+  z-index: 4;
+}
+
+#letter .letterCap.upperHalf {
+  border-top: calc(var(--letter-height) / 3 + 20px) solid #3b85cf;
+  transform: rotateX(90deg);
+  transition-delay: 0.2s;
+  z-index: 1;
+}
+
+#letter.open .letterCap.lowerHalf {
+  transform: rotateX(90deg);
+}
+
+#letter.open .letterCap.upperHalf {
+  transform: rotateX(180deg);
+}
+
+
+ /* content */
+#letter .content {
+  position: absolute;
+  width: calc(var(--letter-width) - 40px);
+  height: 60px;
+  box-shadow: 0 2px 3px 3px #cacaca;
+  left: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 30px 5px;
+  font-size: 2px;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+#letter.open .content {
+  transform: translateY(-20px);
+  transition-delay: 0.2s;
+}
+
+#letter.open .content.active {
+  width: 800px;
+  height: 600px;
+  transform: translate(-250px, -300px);
+  transition-delay: 0.6s;
+  font-size: 20px;
+  z-index: 5;
+}
