@@ -1,0 +1,30 @@
+#slider-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#slider {
+  transition: 0.6s ease;
+}
+
+.slider-item {
+  width: 100vw;
+  height: 100vh;
+}
+
+.active {
+  display: block;
+}
+
+.home {
+  background-color: red;
+}
+
+.data {
+  background-color: blue;
+}
+
+.media {
+  background-color: green;
+}

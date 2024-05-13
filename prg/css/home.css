@@ -1,0 +1,59 @@
+.session-home {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.pgr-logo{
+  width: 36.7592225vh;
+  position: absolute;
+  left: 3.0555vh;
+  top: 7.037vh;
+}
+
+.mnl-line {
+  position: absolute;
+  left: 2.7777vh;
+  bottom: 5.5555vh;
+  border-left: .463vh solid #fff;
+  padding-left: 1.1111vh;
+  font-size: 0;
+  width: 66.7592vh;
+  height: 2.2222vh;
+}
+
+.move-down {
+  width: 7.8704vh;
+  height: 5.2777vh;
+  position: absolute;
+  left: calc(50% - 3.9352vh);
+  bottom: 3.7037vh;
+  user-select: none;
+  animation: movedown infinite 1s ease-in-out;
+}
+
+@keyframes movedown {
+  0%, 30% {
+    opacity: 0;
+    transform: translate(0, -.9259vh);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, .7407vh);
+  }
+}
