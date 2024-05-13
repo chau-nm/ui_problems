@@ -1,1 +1,1 @@
-  import "./pageSlider.js"
+import "./pageSlider.js"

@@ -31,7 +31,7 @@ sliderWrapper.addEventListener('pointerup', (event) => {
   if (dragDistance > 0 && currentIndex > 0) {
     changeSlider(sliderItemList, --currentIndex);
   }
-  if (dragDistance < 0 && currentIndex < sliderItemList.length) {
+  if (dragDistance < 0 && currentIndex < sliderItemList.length - 1) {
     changeSlider(sliderItemList, ++currentIndex);
   }
   startPointer = 0;
