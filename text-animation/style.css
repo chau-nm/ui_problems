@@ -1,0 +1,199 @@
+body {
+  background-color: black;
+}
+
+* {
+  font-family: 'Protest Guerrilla'
+}
+
+.text-animation, .main-character {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(40px, -50px);
+}
+
+.text-animation {
+  visibility: hidden;
+  transform: translate(40px, -50px);
+  animation-name: text;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes text {
+  0% {
+    visibility: visible;
+    transform: scale(0) translate(40px, -50px);
+  }
+  100% {
+    visibility: visible;
+    transform: scale(2) translate(40px, -50px);
+  }
+}
+
+.character, .main-character {
+  font-size: 100px;
+  font-weight: bold;
+  color: transparent;
+  position: absolute;
+}
+
+.main-character {
+  color: #F5D033;
+  animation-name: main-char;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes main-char {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(2);
+  }
+  35% {
+    transform: scale(2) rotate(-45deg);
+  }
+  45% {
+    transform: scale(2) rotate(25deg);
+  }
+  80% {
+    transform: scale(0.25);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.character:nth-child(1) {
+  color: #F5D033;
+  transform: translateX(-170px);
+  animation-name: jump1;
+  animation-delay: 3s;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+.character:nth-child(2) {
+  color: #CB3234;
+  transform: translateX(-100px);
+  animation-name: jump2;
+  animation-delay: 5s;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+.character:nth-child(3) {
+  color: #003cff;
+  transform: translateX(-30px);
+  animation-name: jump3;
+  animation-delay: 7s;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+.character:nth-child(4) {
+  color: #c800ff;
+  transform: translateX(40px);
+  animation-name: jump4;
+  animation-delay: 9s;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jump1 {
+  0% {
+    transform: translateX(-170px) scale(1);
+    z-index: 999;
+  }
+  12% {
+    transform: translateX(-170px) scale(1.5);
+    z-index: 999;
+  }
+  16% {
+    transform: translateX(-170px) scale(1.5) rotate(-45deg);
+    z-index: 999;
+  }
+  18% {
+    transform: translateX(-170px) scale(1.5) rotate(25deg);
+    z-index: 999;
+  }
+  25% {
+    transform: translateX(-170px) scale(1);
+    z-index: 0;
+  }
+}
+
+@keyframes jump2 {
+  0% {
+    transform: translateX(-100px) scale(1);
+    z-index: 999;
+  }
+  12% {
+    transform: translateX(-100px) scale(1.5);
+    z-index: 999;
+  }
+  16% {
+    transform: translateX(-100px) scale(1.5) rotate(-45deg);
+    z-index: 999;
+  }
+  18% {
+    transform: translateX(-100px) scale(1.5) rotate(25deg);
+    z-index: 999;
+  }
+  25% {
+    transform: translateX(-100px) scale(1);
+    z-index: 0;
+  }
+}
+
+@keyframes jump3 {
+  0% {
+    transform: translateX(-30px) scale(1);
+    z-index: 999;
+  }
+  12% {
+    transform: translateX(-30px) scale(1.5);
+    z-index: 999;
+  }
+  16% {
+    transform: translateX(-30px) scale(1.5) rotate(-45deg);
+    z-index: 999;
+  }
+  18% {
+    transform: translateX(-30px) scale(1.5) rotate(25deg);
+    z-index: 999;
+  }
+  25% {
+    transform: translateX(-30px) scale(1);
+    z-index: 0;
+  }
+}
+
+@keyframes jump4 {
+  0% {
+    transform: translateX(40px) scale(1);
+    z-index: 999;
+  }
+  12% {
+    transform: translateX(40px) scale(1.5);
+    z-index: 999;
+  }
+  16% {
+    transform: translateX(40px) scale(1.5) rotate(-45deg);
+    z-index: 999;
+  }
+  18% {
+    transform: translateX(40px) scale(1.5) rotate(25deg);
+    z-index: 999;
+  }
+  25% {
+    transform: translateX(40px) scale(1);
+    z-index: 0;
+  }
+}
