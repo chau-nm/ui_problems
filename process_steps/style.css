@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  height: 5px;
+  margin-bottom: 100px;
+  position: relative;
+  width: fit-content;
+  overflow: visible;
+  align-items: center;
+  background-color: #000000;
+  gap: 100px;
+  z-index: -2;
+}
+
+.step {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 30px;
+  border: 5px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  transition: border-color 1s;
+}
+
+.step.active {
+  border-color: blue;
+  transition-delay: 1s;
+}
+
+#process {
+  position: absolute;
+  background-color: blue;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 5px;
+  z-index: -1;
+  transition: width 1s;
+}
+
+.btns button {
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.btns button:hover {
+  opacity: 0.8;
+}
+
+.btns button[disabled = true]{
+  opacity: 0.5;
+}
