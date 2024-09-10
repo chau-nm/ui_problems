@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app .icon-wrapper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  box-shadow: 3px 3px 8px #adadad;
+  padding: 100px;
+}
+
+#app .icon-wrapper svg {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.check {
+  width: 100px;
+  height: 100px;
+  fill: none; 
+  stroke: green; 
+  stroke-width: 10; 
+  stroke-dasharray: 1300; 
+  stroke-dashoffset: 1300; 
+  animation: stroke-animation 3s ease-out forwards; 
+}
+
+@keyframes stroke-animation {
+  90% {
+    stroke-dashoffset: 0;
+    fill: none;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: green;
+  }
+}
