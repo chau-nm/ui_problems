@@ -1,0 +1,31 @@
+.card {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 150%;
+    background: linear-gradient(90deg, #FFFFFF, #c4c4c4, #FFFFFF);
+    background-size: 200% 100%;
+    opacity: 0.2;
+    transform: rotate(15deg);
+    left: -150%;
+    top: -10%;
+    animation: twinkle 2s infinite 3s;
+}
+
+@keyframes twinkle {
+    0% {
+        left: 150%;
+        background-position: 200%;
+    }
+    100% {
+        left: -150%;
+        background-position: -200%;
+    }
+}
