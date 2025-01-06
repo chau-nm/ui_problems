@@ -9,6 +9,7 @@ const createImage = (url) => {
   const image = document.createElement("img");
   image.classList.add("sliderItem")
   image.src = url;
+  image.draggable = false;
   return image;
 }
 
